@@ -1,6 +1,6 @@
 {
   "name": "@peterek/rollup-externals",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Simple library to gather rollup externals from package dependencies",
   "repository": {
     "type": "git",
