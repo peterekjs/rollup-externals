@@ -1,0 +1,51 @@
+{
+  "name": "@peterek/rollup-externals",
+  "version": "0.0.0",
+  "description": "Simple library to gather rollup externals from package dependencies",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterekjs/rollup-externals.git"
+  },
+  "keywords": [
+    "rollup",
+    "externals"
+  ],
+  "author": {
+    "name": "Jiri Peterek",
+    "email": "jiri@peterek.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterekjs/rollup-externals/issues"
+  },
+  "homepage": "https://github.com/peterekjs/rollup-externals#readme",
+  "sideEffects": false,
+  "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "./dist/rollup-externals.cjs",
+  "module": "./dist/rollup-externals.js",
+  "exports": {
+    ".": {
+      "import": "./dist/rollup-externals.js",
+      "require": "./dist/rollup-externals.cjs"
+    },
+    "./src/*": "./src/*"
+  },
+  "types": "./dist/index.d.ts",
+  "typescript": {
+    "definition": "./dist/index.d.ts"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.3",
+    "vite": "^4.2.1",
+    "vite-plugin-dts": "^2.1.0"
+  }
+}
